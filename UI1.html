@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Questions about Music</title>
+<h1 style="text-align:center;border:3px solid rgb(94, 168, 147);background-color:rgb(174, 242, 226);"> Questions about Music </h1>
+</head>
+	<body style="background-color:powderblue;">
+
+		<form action="index.php" name="my form" method="POST" style="background-color:rgb(174, 242, 226);text-align:center;border:3px solid rgb(94, 168, 147);">
+			
+			<br><a style="font-size:150%;" href="https://open.spotify.com/" ><b>Visit Spotify Now!</b></a> <br>
+
+			<br><a href="https://open.spotify.com/">
+			<img src="Spotify.png" width="1500" height="600" style="border:6px solid rgb(94, 168, 147);">
+			</a><br><br>
+	
+			<label style="font-size:120%;">First name:</label><br>
+				<input type="text" name="FirstName"><br>
+			<label style="font-size:120%;">Last name:</label><br>
+				<input type="text" name="LastName"><br>
+
+		<form action="/action_page.php">
+		<br><label style="font-size:120%;">How old are you?</label><br>
+			<select id="Year" name="Year">
+				<option value="50+">50+ years</option>
+				<option value="30-50">30-50 years</option>
+				<option value="20-30">20-30 years</option>
+				<option value="0-20">0-20 years</option>
+				<option value="Unwillingtoanswer">Unwilling to answer</option>
+			</select>
+
+		<br><br><label style="font-size:120%;">What Gender are you?</label><br>
+			<input type="radio" name="Gender" value:"Male">Male<br>
+			<input type="radio" name="Gender" value:"Female">Female<br>
+			<input type="radio" name="Gender" value:"Non Binary">Non Binary<br>
+
+		<br><label style="font-size:120%;">What do you use to listen to music?</label><br>
+			<input type="checkbox" name="AmazonMusic" value:"Amazon Music">Amazon Music<br>
+			<input type="checkbox" name="iTunes" value:"iTunes">iTunes<br>
+			<input type="checkbox" name="Pandora" value:"Pandora">Pandora<br>
+			<input type="checkbox" name="Spotify" value:"Spotify">Spotify<br>
+			<input type="checkbox" name="Youtube" value:"Youtube">Youtube<br>
+			Other (please specify):<input type="text" name="OtherMusic"><br>
+
+		<br><label style="font-size:120%;">What addition to Spotify would you like to see?:</label><br>
+			<textarea id="Improvements" name="Improvements" rows="4" cols="50">Please enter your response here.
+			</textarea>
+
+		<br><br><br><br>
+		<input type="submit" value="Submit">
+		<br><br>
+		
+		</form>
+
+		<br><br><br>
+		<footer> Website Designed by: Sangraal</footer>
+	
+	</body>
+</html>
