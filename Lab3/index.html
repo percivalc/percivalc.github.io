@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grocery Store</title>
+<h1 style="text-align:center;border:2px solid #884b99;background-color:#f0cdfa;" "font-size:150%;"> Grocery Store </h1>
+
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+.accordion {
+  background-color: #eec0fc;
+  color: #1;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #e2b4f0; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #f8e0ff;
+  overflow: hidden;
+}
+</style>
+
+<body>
+<body style="background-color:#fcf0ff;">
+<button class="accordion">Filter Restrictions</button>
+<div id="Client" class="panel">
+        <h3 style="font-size:150%;";">Filter our Products</h3>
+
+	<p style="font-size:120%;"">Please select any of the dietary restrictions listed below</p>
+                <input type="radio" id="dietSelect" name="dietSelect" value="LactoseFree">Lactose Intolerant<br>
+	        <input type="radio" id="dietSelect" name="dietSelect" value="NutFree">Nut allergy<br>
+	        <input type="radio" id="dietSelect" name="dietSelect" value="Vegan">Vegan<br>
+	        <input type="radio" id="dietSelect" name="dietSelect" value="Kosher">Kosher<br>
+		<input type="radio" id="dietSelect" name="dietSelect" value="None">None<br>
+
+	 <button id="dietSelectUpdate" type="button" onclick="populateListProductChoices('dietSelect', 'displayProduct')">
+          Filter Products
+        </button>
+
+
+
+     <br><br><label style="font-size:120%;">Do you prefer organic food?</label><br>
+            <input type="radio" id="organic" name="organic" value:"Organic">Yes<br>
+	    <input type="radio" id="organic" name="organic" value:"nonOrganic">No<br>
+    <br>
+ </div>
+
+<button class="accordion">Shop</button>
+<div id="Products" class="panel">
+      <h3>Your targeted products</h3>
+      <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<button class="accordion">Cart</button>
+<div id="Cart" class="panel">
+      <h3>Cart</h3>
+      <p>Here is your cart.</p>
+      <div id="displayCart"></div>
+</div>
+<script>
+<!--Taken from w3schools to get the accordian tabs to function properly-->
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
